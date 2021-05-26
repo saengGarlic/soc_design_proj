@@ -1,0 +1,296 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 26 17:42:47 2021
+# Process ID: 21600
+# Current directory: D:/Hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21308 D:\Hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/Hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/Hyun/soc_proj/tetris\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Hyun/soc_proj/tetris/tetris.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_seven_seg_0_1' generated file not found 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_seven_seg_0_1' generated file not found 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_seven_seg_0_1' generated file not found 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_seven_seg_0_1' generated file not found 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_seven_seg_0_1' generated file not found 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_seven_seg_0_1
+
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 760.465 ; gain = 102.566
+update_compile_order -fileset sources_1
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:textlcd:1.0 - textlcd_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:user:pushbutton:1.0 - pushbutton_0
+Adding component instance block -- xilinx.com:user:TFTLCD_NEW:1.0 - TFTLCD_NEW_0
+Adding component instance block -- xilinx.com:user:seven_seg:1.0 - seven_seg_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /resetn_0(rst) and /TFTLCD_NEW_0/TFTLCD_nRESET(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_0(clk) and /textlcd_0/lcdclk(undef)
+Successfully read diagram <system> from BD file <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd>
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  D:/Hyun/soc_proj/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_1
+delete_bd_objs [get_bd_cells seven_seg_1]
+save_bd_design
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+reset_run system_processing_system7_0_0_synth_1
+reset_run system_xbar_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block textlcd_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pushbutton_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TFTLCD_NEW_0 .
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v'.
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3505] IP Generation error: Failed to generate IP 'seven_seg_0'. Failed to generate 'Verilog Synthesis' outputs: 
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to generate IP 'seven_seg_0'. Failed to generate 'Verilog Synthesis' outputs: 
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block seven_seg_0 
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = de5e8fa01b9552af; cache size = 3.722 MB.
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets seven_seg_0_seg_en] [get_bd_nets seven_seg_0_seg_data] [get_bd_cells seven_seg_0]
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml. It will be created.
+validate_bd_design
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+create_peripheral xilinx.com user seven_seg 1.0 -dir D:/Hyun/soc_proj/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+set_property  ip_repo_paths  {D:/Hyun/soc_proj/ip_repo/seven_seg_1.0 D:/Hyun/soc_proj/ip_repo} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+ipx::edit_ip_in_project -upgrade true -name edit_seven_seg_v1_0 -directory D:/Hyun/soc_proj/ip_repo d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0.v:]
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/src {C:/Users/정우현/Desktop/seven_seg_1.0/src/seven_seg.v C:/Users/정우현/Desktop/seven_seg_1.0/src/bin2seg.v}
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/Hyun/soc_proj/ip_repo/seven_seg_1.0
+CRITICAL WARNING: [IP_Flow 19-1681] Failed to reload user IP repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. ''d:/Hyun/soc_proj/ip_repo/seven_seg_1.0' is not valid: Path is contained within another repository.'
+0
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_0
+endgroup
+set_property location {3 964 707} [get_bd_cells seven_seg_0]
+delete_bd_objs [get_bd_cells seven_seg_0]
+ipx::edit_ip_in_project -upgrade true -name seven_seg_v1_0_project -directory D:/Hyun/soc_proj/tetris/tetris.tmp/seven_seg_v1_0_project d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/src/bin2seg.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/src/seven_seg.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1337.363 ; gain = 0.000
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/Hyun/soc_proj/ip_repo/seven_seg_1.0
+CRITICAL WARNING: [IP_Flow 19-1681] Failed to reload user IP repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. ''d:/Hyun/soc_proj/ip_repo/seven_seg_1.0' is not valid: Path is contained within another repository.'
+0
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_0
+endgroup
+set_property location {3 895 712} [get_bd_cells seven_seg_0]
+delete_bd_objs [get_bd_cells seven_seg_0]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/Hyun/soc_proj/ip_repo/seven_seg_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+set_property  ip_repo_paths  d:/Hyun/soc_proj/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_0
+endgroup
+set_property location {3 935 721} [get_bd_cells seven_seg_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/seven_seg_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins seven_seg_0/S00_AXI]
+Slave segment </seven_seg_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins seven_seg_0/resetn]
+startgroup
+make_bd_pins_external  [get_bd_pins seven_seg_0/clk]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_pins seven_seg_0/clk]'
+INFO: [Common 17-17] undo 'startgroup'
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins seven_seg_0/clk]
+connect_bd_net [get_bd_ports seg_en_0] [get_bd_pins seven_seg_0/seg_en]
+connect_bd_net [get_bd_ports seg_data_0] [get_bd_pins seven_seg_0/seg_data]
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block textlcd_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pushbutton_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TFTLCD_NEW_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seven_seg_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = de5e8fa01b9552af; cache size = 3.722 MB.
+[Wed May 26 17:53:06 2021] Launched system_processing_system7_0_0_synth_1, system_xbar_1_synth_1, system_seven_seg_0_4_synth_1, synth_1...
+Run output will be captured here:
+system_processing_system7_0_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_processing_system7_0_0_synth_1/runme.log
+system_xbar_1_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_xbar_1_synth_1/runme.log
+system_seven_seg_0_4_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_seven_seg_0_4_synth_1/runme.log
+synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/synth_1/runme.log
+[Wed May 26 17:53:06 2021] Launched impl_1...
+Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.363 ; gain = 0.000
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+disconnect_bd_net /clk_0_1 [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
+disconnect_bd_net /resetn_0_1 [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /resetn_0_1 [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]'
+WARNING: [BD 41-1731] Type mismatch between connected pins: /resetn_0(rst) and /TFTLCD_NEW_0/TFTLCD_nRESET(undef)
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /clk_0_1 [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]'
+save_bd_design
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block textlcd_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pushbutton_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TFTLCD_NEW_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seven_seg_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = de5e8fa01b9552af; cache size = 4.678 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_processing_system7_0_0, cache-ID = f7496484346130ad; cache size = 4.678 MB.
+[Wed May 26 18:02:43 2021] Launched synth_1...
+Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/synth_1/runme.log
+[Wed May 26 18:02:43 2021] Launched impl_1...
+Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2455.508 ; gain = 56.742

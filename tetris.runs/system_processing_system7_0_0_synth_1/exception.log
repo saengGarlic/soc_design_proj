@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\Hyun\soc_proj\tetris\tetris.runs\system_processing_system7_0_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 사용 권한이 없습니다.

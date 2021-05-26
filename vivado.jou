@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 26 19:06:28 2021
+# Process ID: 39012
+# Current directory: D:/Hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31992 D:\Hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/Hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/Hyun/soc_proj/tetris\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Hyun/soc_proj/tetris/tetris.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+delete_bd_objs [get_bd_nets TFTLCD_CLK_0_1] [get_bd_ports TFTLCD_CLK_0]
+delete_bd_objs [get_bd_nets TFTLCD_nRESET_0_1] [get_bd_ports TFTLCD_nRESET_0]
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
+save_bd_design

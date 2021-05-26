@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 26 17:15:32 2021
+# Process ID: 36524
+# Current directory: D:/Hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10012 D:\Hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/Hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/Hyun/soc_proj/tetris\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Hyun/soc_proj/tetris/tetris.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+ipx::edit_ip_in_project -upgrade true -name TFTLCD_NEW_v1_0_project -directory D:/Hyun/soc_proj/tetris/tetris.tmp/TFTLCD_NEW_v1_0_project d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 10 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/Hyun/soc_proj/tetris/ip_repo
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:TFTLCD_NEW:1.0 TFTLCD_NEW_0
+endgroup
+set_property location {4 1258 767} [get_bd_cells TFTLCD_NEW_0]
+set_property location {3 1308 519} [get_bd_cells seven_seg_0]
+set_property location {3 1288 746} [get_bd_cells textlcd_0]
+set_property location {3 1337 931} [get_bd_cells pushbutton_0]
+set_property location {1 762 685} [get_bd_cells TFTLCD_NEW_0]
+set_property location {2 1261 538} [get_bd_cells seven_seg_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/TFTLCD_NEW_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins TFTLCD_NEW_0/S00_AXI]
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
+regenerate_bd_layout -routing
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_TCLK]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Hsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Vsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_DE_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_R]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_G]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_B]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Tpower]
+endgroup
+regenerate_bd_layout -routing
+save_bd_design
+make_wrapper -files [get_files D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd] -top
+import_files -force -norecurse D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+ipx::edit_ip_in_project -upgrade true -name seven_seg_v1_0_project -directory D:/Hyun/soc_proj/tetris/tetris.tmp/seven_seg_v1_0_project d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/bin2seg.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/seven_seg.v}
+add_files -norecurse {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/bin2seg.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/seven_seg.v}
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+add_files -norecurse {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+close_project
+set_property  ip_repo_paths  {d:/Hyun/soc_proj/tetris/ip_repo D:/Hyun/soc_proj/ip_repo} [current_project]
+update_ip_catalog
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+set_property  ip_repo_paths  d:/Hyun/soc_proj/ip_repo [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_1
+endgroup
+set_property location {2 546 775} [get_bd_cells seven_seg_1]
+delete_bd_objs [get_bd_cells seven_seg_1]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets seven_seg_0_seg_en] [get_bd_nets seven_seg_0_seg_data] [get_bd_cells seven_seg_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_0
+endgroup
+set_property location {3 998 557} [get_bd_cells seven_seg_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/seven_seg_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins seven_seg_0/S00_AXI]
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins seven_seg_0/clk]
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins seven_seg_0/resetn]
+connect_bd_net [get_bd_ports seg_en_0] [get_bd_pins seven_seg_0/seg_en]
+connect_bd_net [get_bd_ports seg_data_0] [get_bd_pins seven_seg_0/seg_data]
+regenerate_bd_layout -routing
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets seven_seg_0_seg_data] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets seven_seg_0_seg_en] [get_bd_cells seven_seg_0]
+update_ip_catalog -delete_ip xilinx.com:user:seven_seg:1.0 -repo_path d:/Hyun/soc_proj/ip_repo
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  D:/Hyun/soc_proj/tetris/ip_repo [current_project]
+update_ip_catalog
+update_ip_catalog -delete_ip xilinx.com:user:seven_seg:1.0 -repo_path d:/Hyun/soc_proj/tetris/ip_repo
+create_peripheral xilinx.com user seven_seg 1.0 -dir D:/Hyun/soc_proj/tetris/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:seven_seg:1.0]

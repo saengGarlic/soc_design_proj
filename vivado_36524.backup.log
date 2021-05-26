@@ -1,0 +1,305 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 26 17:15:32 2021
+# Process ID: 36524
+# Current directory: D:/Hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10012 D:\Hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/Hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/Hyun/soc_proj/tetris\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Hyun/soc_proj/tetris/tetris.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 969.934 ; gain = 66.965
+update_compile_order -fileset sources_1
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:seven_seg:1.0 - seven_seg_0
+Adding component instance block -- xilinx.com:user:textlcd:1.0 - textlcd_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:user:pushbutton:1.0 - pushbutton_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_0(clk) and /textlcd_0/lcdclk(undef)
+Successfully read diagram <system> from BD file <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd>
+ipx::edit_ip_in_project -upgrade true -name TFTLCD_NEW_v1_0_project -directory D:/Hyun/soc_proj/tetris/tetris.tmp/TFTLCD_NEW_v1_0_project d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/clock_divider.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/grid_block.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/horizontal.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/tftlcdctrl.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/vertical.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 970.160 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml' ignored by IP packager.
+set_property core_revision 10 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/Hyun/soc_proj/tetris/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:TFTLCD_NEW:1.0 TFTLCD_NEW_0
+endgroup
+set_property location {4 1258 767} [get_bd_cells TFTLCD_NEW_0]
+set_property location {3 1308 519} [get_bd_cells seven_seg_0]
+set_property location {3 1288 746} [get_bd_cells textlcd_0]
+set_property location {3 1337 931} [get_bd_cells pushbutton_0]
+set_property location {1 762 685} [get_bd_cells TFTLCD_NEW_0]
+set_property location {2 1261 538} [get_bd_cells seven_seg_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/TFTLCD_NEW_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins TFTLCD_NEW_0/S00_AXI]
+Slave segment </TFTLCD_NEW_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C3_0000 [ 64K ]>
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /resetn_0(rst) and /TFTLCD_NEW_0/TFTLCD_nRESET(undef)
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
+regenerate_bd_layout -routing
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_TCLK]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Hsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Vsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_DE_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_R]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_G]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_B]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins TFTLCD_NEW_0/TFTLCD_Tpower]
+endgroup
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+make_wrapper -files [get_files D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd] -top
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1119.609 ; gain = 149.449
+import_files -force -norecurse D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v'.
+CRITICAL WARNING: [IP_Flow 19-663] Failed to copy file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v', it does not exist.
+CRITICAL WARNING: [IP_Flow 19-157] Failed to copy file from 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' to 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ipshared/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v'.
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3505] IP Generation error: Failed to generate IP 'seven_seg_0'. Failed to generate 'Verilog Synthesis' outputs: 
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to generate IP 'seven_seg_0'. Failed to generate 'Verilog Synthesis' outputs: 
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block seven_seg_0 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block textlcd_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pushbutton_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TFTLCD_NEW_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.hwdef
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+ipx::edit_ip_in_project -upgrade true -name seven_seg_v1_0_project -directory D:/Hyun/soc_proj/tetris/tetris.tmp/seven_seg_v1_0_project d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' does not exist. The file is ignored.
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/bin2seg.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/seven_seg.v}
+ERROR: [Vivado 12-3630] The destination file 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/bin2seg.v' already exists, please use -force if you want to overwrite!
+add_files -norecurse {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/bin2seg.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/src/seven_seg.v}
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 7-560]  
+CRITICAL WARNING: [IP_Flow 19-4835] Multiple IP ports (s00_axi_rready s00_axi_rvalid s00_axi_rresp s00_axi_rdata s00_axi_arready s00_axi_arvalid s00_axi_arprot s00_axi_araddr s00_axi_bready s00_axi_bvalid s00_axi_bresp s00_axi_wready s00_axi_wvalid s00_axi_wstrb s00_axi_wdata s00_axi_awready s00_axi_awvalid s00_axi_awprot s00_axi_awaddr) were removed from the interface 'S00_AXI'. Please review the IP interface 'S00_AXI'.
+CRITICAL WARNING: [IP_Flow 19-4834] IP port (s00_axi_aresetn) was removed from the interface 'S00_AXI_RST'. Please review the IP interface 'S00_AXI_RST'.
+CRITICAL WARNING: [IP_Flow 19-4834] IP port (s00_axi_aclk) was removed from the interface 'S00_AXI_CLK'. Please review the IP interface 'S00_AXI_CLK'.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+add_files -norecurse {D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0.v D:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+close_project
+set_property  ip_repo_paths  {d:/Hyun/soc_proj/tetris/ip_repo D:/Hyun/soc_proj/ip_repo} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:pushbutton:1.0'. The one found in IP location 'd:/Hyun/soc_proj/tetris/ip_repo/pushbutton_1.0' will take precedence over the same IP in location d:/Hyun/soc_proj/ip_repo/pushbutton_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:seven_seg:1.0'. The one found in IP location 'd:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0' will take precedence over the same IP in location d:/Hyun/soc_proj/ip_repo/seven_seg_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:textlcd:1.0'. The one found in IP location 'd:/Hyun/soc_proj/tetris/ip_repo/textlcd_1.0' will take precedence over the same IP in location d:/Hyun/soc_proj/ip_repo/textlcd_1.0
+open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: d:/Hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml. It will be created.
+set_property  ip_repo_paths  d:/Hyun/soc_proj/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_1
+endgroup
+set_property location {2 546 775} [get_bd_cells seven_seg_1]
+delete_bd_objs [get_bd_cells seven_seg_1]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets seven_seg_0_seg_en] [get_bd_nets seven_seg_0_seg_data] [get_bd_cells seven_seg_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:seven_seg:1.0 seven_seg_0
+endgroup
+set_property location {3 998 557} [get_bd_cells seven_seg_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/seven_seg_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins seven_seg_0/S00_AXI]
+Slave segment </seven_seg_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins seven_seg_0/clk]
+connect_bd_net [get_bd_ports resetn_0] [get_bd_pins seven_seg_0/resetn]
+connect_bd_net [get_bd_ports seg_en_0] [get_bd_pins seven_seg_0/seg_en]
+connect_bd_net [get_bd_ports seg_data_0] [get_bd_pins seven_seg_0/seg_data]
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_textlcd_0_0/system_textlcd_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_rst_ps7_0_50M_1/system_rst_ps7_0_50M_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_pushbutton_0_0/system_pushbutton_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_TFTLCD_NEW_0_0/system_TFTLCD_NEW_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_seven_seg_0_1/system_seven_seg_0_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_TFTLCD_NEW_0_0/system_TFTLCD_NEW_0_0.xci' in run system_TFTLCD_NEW_0_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Project 1-576] IP 'd:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_TFTLCD_NEW_0_0/system_TFTLCD_NEW_0_0.xci' in run system_TFTLCD_NEW_0_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Wed May 26 17:36:15 2021] Launched system_TFTLCD_NEW_0_0_synth_1, system_auto_pc_0_synth_1, system_rst_ps7_0_50M_1_synth_1, system_processing_system7_0_0_synth_1, system_pushbutton_0_0_synth_1, system_xbar_1_synth_1, system_textlcd_0_0_synth_1, system_seven_seg_0_1_synth_1, synth_1...
+Run output will be captured here:
+system_TFTLCD_NEW_0_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_TFTLCD_NEW_0_0_synth_1/runme.log
+system_auto_pc_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_auto_pc_0_synth_1/runme.log
+system_rst_ps7_0_50M_1_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_rst_ps7_0_50M_1_synth_1/runme.log
+system_processing_system7_0_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_processing_system7_0_0_synth_1/runme.log
+system_pushbutton_0_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_pushbutton_0_0_synth_1/runme.log
+system_xbar_1_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_xbar_1_synth_1/runme.log
+system_textlcd_0_0_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_textlcd_0_0_synth_1/runme.log
+system_seven_seg_0_1_synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/system_seven_seg_0_1_synth_1/runme.log
+synth_1: D:/Hyun/soc_proj/tetris/tetris.runs/synth_1/runme.log
+[Wed May 26 17:36:15 2021] Launched impl_1...
+Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
+delete_bd_objs [get_bd_nets seven_seg_0_seg_data] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets seven_seg_0_seg_en] [get_bd_cells seven_seg_0]
+update_ip_catalog -delete_ip xilinx.com:user:seven_seg:1.0 -repo_path d:/Hyun/soc_proj/ip_repo
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' because it doesn't exist.
+INFO: [IP_Flow 19-1659] Deleted IP 'xilinx.com:user:seven_seg:1.0' from repository 'd:/Hyun/soc_proj/ip_repo' at d:/Hyun/soc_proj/ip_repo/seven_seg_1.0.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/Hyun/soc_proj/ip_repo'
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  D:/Hyun/soc_proj/tetris/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'.
+update_ip_catalog -delete_ip xilinx.com:user:seven_seg:1.0 -repo_path d:/Hyun/soc_proj/tetris/ip_repo
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/bin2seg.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/src/seven_seg.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0_S00_AXI.v' because it doesn't exist.
+WARNING: [IP_Flow 19-881] Failed to delete file 'd:/Hyun/soc_proj/tetris/ip_repo/edit_seven_seg_v1_0.srcs/sources_1/imports/seven_seg_1.0/hdl/seven_seg_v1_0.v' because it doesn't exist.
+INFO: [IP_Flow 19-1659] Deleted IP 'xilinx.com:user:seven_seg:1.0' from repository 'd:/Hyun/soc_proj/tetris/ip_repo' at d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/Hyun/soc_proj/tetris/ip_repo'
+create_peripheral xilinx.com user seven_seg 1.0 -dir D:/Hyun/soc_proj/tetris/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:seven_seg:1.0]
+ERROR: [Ptgen 51-78] The directory d:/Hyun/soc_proj/tetris/ip_repo/seven_seg_1.0 already exists, Please use '-force' to overwrite it.
+ERROR: [Ipptcl 7-552] Failed to generate peripheral !
+ERROR: [Common 17-39] 'generate_peripheral' failed due to earlier errors.

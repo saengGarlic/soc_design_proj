@@ -6,7 +6,7 @@
 <Project Version="7" Minor="40" Path="d:/hyun/soc_proj/tetris/tetris.tmp/textlcd_v1_0_project/textlcd_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d69d8d511a6546eab0ac1bc9dd6bff20"/>
+    <Option Name="Id" Val="5816177e32394dde99fcc0e81c55b316"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -21,8 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/pushbutton_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -61,7 +60,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/textlcd_1.0/src/textlcd.v">
+      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo/textlcd_1.0/src/textlcd.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -69,7 +68,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/textlcd_1.0/hdl/textlcd_v1_0_S00_AXI.v">
+      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo/textlcd_1.0/hdl/textlcd_v1_0_S00_AXI.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -77,7 +76,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/textlcd_1.0/hdl/textlcd_v1_0.v">
+      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo/textlcd_1.0/hdl/textlcd_v1_0.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -85,13 +84,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/textlcd_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo/textlcd_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="textlcd_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../Hyun/soc_proj/ip_repo/textlcd_1.0/hdl/textlcd_v1_0.v"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../Hyun/soc_proj/tetris/ip_repo/textlcd_1.0/hdl/textlcd_v1_0.v"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
