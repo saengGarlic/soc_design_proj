@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Wed May 26 18:33:26 2021
 // Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_processing_system7_0_0 -prefix
+//               system_processing_system7_0_0_ system_processing_system7_0_0_stub.v
 // Design      : system_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

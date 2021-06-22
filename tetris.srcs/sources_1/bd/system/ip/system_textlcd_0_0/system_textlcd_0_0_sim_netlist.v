@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed May 26 17:37:08 2021
+// Date        : Wed May 26 17:37:07 2021
 // Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_textlcd_0_0/system_textlcd_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top system_textlcd_0_0 -prefix
+//               system_textlcd_0_0_ system_textlcd_0_0_sim_netlist.v
 // Design      : system_textlcd_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -126,7 +126,6 @@ module system_textlcd_0_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "textlcd" *) 
 module system_textlcd_0_0_textlcd
    (lcd_en,
     lcd_data,
@@ -2061,7 +2060,6 @@ module system_textlcd_0_0_textlcd
         .O(lcd_rs));
 endmodule
 
-(* ORIG_REF_NAME = "textlcd_v1_0" *) 
 module system_textlcd_0_0_textlcd_v1_0
    (S_AXI_AWREADY,
     S_AXI_WREADY,
@@ -2156,7 +2154,6 @@ module system_textlcd_0_0_textlcd_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "textlcd_v1_0_S00_AXI" *) 
 module system_textlcd_0_0_textlcd_v1_0_S00_AXI
    (S_AXI_AWREADY,
     S_AXI_WREADY,

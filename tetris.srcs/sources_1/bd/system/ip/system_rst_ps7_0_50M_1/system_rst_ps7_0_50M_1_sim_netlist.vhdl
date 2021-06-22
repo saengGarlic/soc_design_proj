@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed May 26 18:33:22 2021
+-- Date        : Wed May 26 18:33:21 2021
 -- Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_rst_ps7_0_50M_1/system_rst_ps7_0_50M_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_rst_ps7_0_50M_1 -prefix
+--               system_rst_ps7_0_50M_1_ system_rst_ps7_0_50M_1_sim_netlist.vhdl
 -- Design      : system_rst_ps7_0_50M_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity system_rst_ps7_0_50M_1_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_rst_ps7_0_50M_1_cdc_sync : entity is "cdc_sync";
 end system_rst_ps7_0_50M_1_cdc_sync;
 
 architecture STRUCTURE of system_rst_ps7_0_50M_1_cdc_sync is
@@ -235,8 +233,6 @@ entity system_rst_ps7_0_50M_1_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_rst_ps7_0_50M_1_upcnt_n : entity is "upcnt_n";
 end system_rst_ps7_0_50M_1_upcnt_n;
 
 architecture STRUCTURE of system_rst_ps7_0_50M_1_upcnt_n is
@@ -401,8 +397,6 @@ entity system_rst_ps7_0_50M_1_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_rst_ps7_0_50M_1_lpf : entity is "lpf";
 end system_rst_ps7_0_50M_1_lpf;
 
 architecture STRUCTURE of system_rst_ps7_0_50M_1_lpf is
@@ -584,8 +578,6 @@ entity system_rst_ps7_0_50M_1_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_rst_ps7_0_50M_1_sequence_psr : entity is "sequence_psr";
 end system_rst_ps7_0_50M_1_sequence_psr;
 
 architecture STRUCTURE of system_rst_ps7_0_50M_1_sequence_psr is
@@ -924,8 +916,6 @@ entity system_rst_ps7_0_50M_1_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of system_rst_ps7_0_50M_1_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of system_rst_ps7_0_50M_1_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_rst_ps7_0_50M_1_proc_sys_reset : entity is "proc_sys_reset";
 end system_rst_ps7_0_50M_1_proc_sys_reset;
 
 architecture STRUCTURE of system_rst_ps7_0_50M_1_proc_sys_reset is

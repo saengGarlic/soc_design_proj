@@ -160,7 +160,6 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set TFTLCD_B_0 [ create_bd_port -dir O -from 7 -to 3 TFTLCD_B_0 ]
-  set TFTLCD_CLK_0 [ create_bd_port -dir I -type clk TFTLCD_CLK_0 ]
   set TFTLCD_DE_out_0 [ create_bd_port -dir O TFTLCD_DE_out_0 ]
   set TFTLCD_G_0 [ create_bd_port -dir O -from 7 -to 2 TFTLCD_G_0 ]
   set TFTLCD_Hsync_0 [ create_bd_port -dir O TFTLCD_Hsync_0 ]
@@ -168,7 +167,6 @@ proc create_root_design { parentCell } {
   set TFTLCD_TCLK_0 [ create_bd_port -dir O TFTLCD_TCLK_0 ]
   set TFTLCD_Tpower_0 [ create_bd_port -dir O TFTLCD_Tpower_0 ]
   set TFTLCD_Vsync_0 [ create_bd_port -dir O TFTLCD_Vsync_0 ]
-  set TFTLCD_nRESET_0 [ create_bd_port -dir I TFTLCD_nRESET_0 ]
   set clk_0 [ create_bd_port -dir I -type clk clk_0 ]
   set lcd_data_0 [ create_bd_port -dir O -from 7 -to 0 lcd_data_0 ]
   set lcd_en_0 [ create_bd_port -dir O lcd_en_0 ]
@@ -305,7 +303,6 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins TFTLCD_NEW_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
 
   # Create port connections
-  connect_bd_net -net TFTLCD_CLK_0_1 [get_bd_ports TFTLCD_CLK_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_B [get_bd_ports TFTLCD_B_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_B]
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_DE_out [get_bd_ports TFTLCD_DE_out_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_DE_out]
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_G [get_bd_ports TFTLCD_G_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_G]
@@ -314,13 +311,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_TCLK [get_bd_ports TFTLCD_TCLK_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_TCLK]
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_Tpower [get_bd_ports TFTLCD_Tpower_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_Tpower]
   connect_bd_net -net TFTLCD_NEW_0_TFTLCD_Vsync [get_bd_ports TFTLCD_Vsync_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_Vsync]
-  connect_bd_net -net TFTLCD_nRESET_0_1 [get_bd_ports TFTLCD_nRESET_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins seven_seg_0/clk] [get_bd_pins textlcd_0/lcdclk]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK] [get_bd_pins seven_seg_0/clk] [get_bd_pins textlcd_0/lcdclk]
   connect_bd_net -net pb_0_1 [get_bd_ports pb_0] [get_bd_pins pushbutton_0/pb]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins TFTLCD_NEW_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins pushbutton_0/s00_axi_aclk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins seven_seg_0/s00_axi_aclk] [get_bd_pins textlcd_0/s00_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net pushbutton_0_intr [get_bd_pins processing_system7_0/Core0_nIRQ] [get_bd_pins pushbutton_0/intr]
-  connect_bd_net -net resetn_0_1 [get_bd_ports resetn_0] [get_bd_pins seven_seg_0/resetn] [get_bd_pins textlcd_0/resetn]
+  connect_bd_net -net resetn_0_1 [get_bd_ports resetn_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET] [get_bd_pins seven_seg_0/resetn] [get_bd_pins textlcd_0/resetn]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins TFTLCD_NEW_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins pushbutton_0/s00_axi_aresetn] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins seven_seg_0/s00_axi_aresetn] [get_bd_pins textlcd_0/s00_axi_aresetn]
   connect_bd_net -net seven_seg_0_seg_data [get_bd_ports seg_data_0] [get_bd_pins seven_seg_0/seg_data]
   connect_bd_net -net seven_seg_0_seg_en [get_bd_ports seg_en_0] [get_bd_pins seven_seg_0/seg_en]

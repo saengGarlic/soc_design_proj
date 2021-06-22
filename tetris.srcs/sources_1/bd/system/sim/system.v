@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed May 26 18:32:18 2021
-//Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
+//Date        : Thu Jun 10 16:20:03 2021
+//Host        : DESKTOP-8KJ0KRR running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
 //Purpose     : IP block netlist
@@ -898,14 +898,13 @@ module s00_couplers_imp_11SE3QO
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_clkrst_cnt=5,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_clkrst_cnt=5,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     TFTLCD_B_0,
-    TFTLCD_CLK_0,
     TFTLCD_DE_out_0,
     TFTLCD_G_0,
     TFTLCD_Hsync_0,
@@ -913,7 +912,6 @@ module system
     TFTLCD_TCLK_0,
     TFTLCD_Tpower_0,
     TFTLCD_Vsync_0,
-    TFTLCD_nRESET_0,
     clk_0,
     lcd_data_0,
     lcd_en_0,
@@ -928,7 +926,6 @@ module system
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   output [7:3]TFTLCD_B_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.TFTLCD_CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.TFTLCD_CLK_0, CLK_DOMAIN system_TFTLCD_CLK_0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input TFTLCD_CLK_0;
   output TFTLCD_DE_out_0;
   output [7:2]TFTLCD_G_0;
   output TFTLCD_Hsync_0;
@@ -936,7 +933,6 @@ module system
   output TFTLCD_TCLK_0;
   output TFTLCD_Tpower_0;
   output TFTLCD_Vsync_0;
-  input TFTLCD_nRESET_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_0, CLK_DOMAIN system_clk_0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input clk_0;
   output [7:0]lcd_data_0;
   output lcd_en_0;
@@ -947,7 +943,6 @@ module system
   output [7:0]seg_data_0;
   output [7:0]seg_en_0;
 
-  wire TFTLCD_CLK_0_1;
   wire [7:3]TFTLCD_NEW_0_TFTLCD_B;
   wire TFTLCD_NEW_0_TFTLCD_DE_out;
   wire [7:2]TFTLCD_NEW_0_TFTLCD_G;
@@ -956,7 +951,6 @@ module system
   wire TFTLCD_NEW_0_TFTLCD_TCLK;
   wire TFTLCD_NEW_0_TFTLCD_Tpower;
   wire TFTLCD_NEW_0_TFTLCD_Vsync;
-  wire TFTLCD_nRESET_0_1;
   wire clk_0_1;
   wire [3:0]pb_0_1;
   wire processing_system7_0_FCLK_CLK0;
@@ -1090,7 +1084,6 @@ module system
   wire textlcd_0_lcd_rw;
 
   assign TFTLCD_B_0[7:3] = TFTLCD_NEW_0_TFTLCD_B;
-  assign TFTLCD_CLK_0_1 = TFTLCD_CLK_0;
   assign TFTLCD_DE_out_0 = TFTLCD_NEW_0_TFTLCD_DE_out;
   assign TFTLCD_G_0[7:2] = TFTLCD_NEW_0_TFTLCD_G;
   assign TFTLCD_Hsync_0 = TFTLCD_NEW_0_TFTLCD_Hsync;
@@ -1098,7 +1091,6 @@ module system
   assign TFTLCD_TCLK_0 = TFTLCD_NEW_0_TFTLCD_TCLK;
   assign TFTLCD_Tpower_0 = TFTLCD_NEW_0_TFTLCD_Tpower;
   assign TFTLCD_Vsync_0 = TFTLCD_NEW_0_TFTLCD_Vsync;
-  assign TFTLCD_nRESET_0_1 = TFTLCD_nRESET_0;
   assign clk_0_1 = clk_0;
   assign lcd_data_0[7:0] = textlcd_0_lcd_data;
   assign lcd_en_0 = textlcd_0_lcd_en;
@@ -1108,9 +1100,9 @@ module system
   assign resetn_0_1 = resetn_0;
   assign seg_data_0[7:0] = seven_seg_0_seg_data;
   assign seg_en_0[7:0] = seven_seg_0_seg_en;
-  system_TFTLCD_NEW_0_0 TFTLCD_NEW_0
+  system_TFTLCD_NEW_0_3 TFTLCD_NEW_0
        (.TFTLCD_B(TFTLCD_NEW_0_TFTLCD_B),
-        .TFTLCD_CLK(TFTLCD_CLK_0_1),
+        .TFTLCD_CLK(clk_0_1),
         .TFTLCD_DE_out(TFTLCD_NEW_0_TFTLCD_DE_out),
         .TFTLCD_G(TFTLCD_NEW_0_TFTLCD_G),
         .TFTLCD_Hsync(TFTLCD_NEW_0_TFTLCD_Hsync),
@@ -1118,7 +1110,7 @@ module system
         .TFTLCD_TCLK(TFTLCD_NEW_0_TFTLCD_TCLK),
         .TFTLCD_Tpower(TFTLCD_NEW_0_TFTLCD_Tpower),
         .TFTLCD_Vsync(TFTLCD_NEW_0_TFTLCD_Vsync),
-        .TFTLCD_nRESET(TFTLCD_nRESET_0_1),
+        .TFTLCD_nRESET(resetn_0_1),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -1345,7 +1337,7 @@ module system
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  system_seven_seg_0_4 seven_seg_0
+  system_seven_seg_0_5 seven_seg_0
        (.clk(clk_0_1),
         .resetn(resetn_0_1),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),

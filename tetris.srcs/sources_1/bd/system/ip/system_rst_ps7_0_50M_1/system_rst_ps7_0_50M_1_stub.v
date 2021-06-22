@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed May 26 18:33:22 2021
+// Date        : Wed May 26 18:33:21 2021
 // Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_rst_ps7_0_50M_1/system_rst_ps7_0_50M_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_rst_ps7_0_50M_1 -prefix
+//               system_rst_ps7_0_50M_1_ system_rst_ps7_0_50M_1_stub.v
 // Design      : system_rst_ps7_0_50M_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

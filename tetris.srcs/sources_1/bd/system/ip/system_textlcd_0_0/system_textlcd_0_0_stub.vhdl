@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed May 26 17:37:08 2021
+-- Date        : Wed May 26 17:37:07 2021
 -- Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_textlcd_0_0/system_textlcd_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top system_textlcd_0_0 -prefix
+--               system_textlcd_0_0_ system_textlcd_0_0_stub.vhdl
 -- Design      : system_textlcd_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

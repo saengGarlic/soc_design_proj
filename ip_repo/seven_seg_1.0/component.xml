@@ -304,7 +304,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1399b81c</spirit:value>
+            <spirit:value>73fd2f76</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -320,7 +320,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1399b81c</spirit:value>
+            <spirit:value>73fd2f76</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -334,7 +334,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bedc302d</spirit:value>
+            <spirit:value>c85a030b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -348,7 +348,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dda4df14</spirit:value>
+            <spirit:value>fd592ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -362,7 +362,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>16328387</spirit:value>
+            <spirit:value>45a2f450</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -787,7 +787,7 @@
       <spirit:file>
         <spirit:name>hdl/seven_seg_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9bf0e82a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_eaccbbd6</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -924,8 +924,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>seven_seg_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-05-26T08:51:14Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-06-10T07:19:08Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2e11d43d_ARCHIVE_LOCATION">d:/Hyun/soc_proj/ip_repo/seven_seg_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@53b07234_ARCHIVE_LOCATION">d:/Hyun/soc_proj/ip_repo/seven_seg_1.0</xilinx:tag>
@@ -957,13 +957,24 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2ca9d00d_ARCHIVE_LOCATION">d:/Hyun/soc_proj/ip_repo/seven_seg_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6ac24902_ARCHIVE_LOCATION">d:/Hyun/soc_proj/ip_repo/seven_seg_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@f52bae7_ARCHIVE_LOCATION">d:/Hyun/soc_proj/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77208984_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b73fae_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e60cc40_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b8a096f_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63c6c20_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bac53ad_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@658caf16_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66af51e2_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38770dbd_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73119ab2_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b68e989_ARCHIVE_LOCATION">d:/hyun/soc_proj/tetris/ip_repo/seven_seg_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3815942d"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8443b4c9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="21780baa"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="754cef14"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="f919a0db"/>

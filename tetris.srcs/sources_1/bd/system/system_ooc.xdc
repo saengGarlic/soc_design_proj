@@ -7,6 +7,5 @@
 # of Vivado)
 ################################################################################
 create_clock -name clk_0 -period 10 [get_ports clk_0]
-create_clock -name TFTLCD_CLK_0 -period 10 [get_ports TFTLCD_CLK_0]
 
 ################################################################################

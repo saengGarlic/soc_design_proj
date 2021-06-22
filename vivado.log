@@ -2,29 +2,58 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed May 26 19:06:28 2021
-# Process ID: 39012
-# Current directory: D:/Hyun/soc_proj/tetris
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31992 D:\Hyun\soc_proj\tetris\tetris.xpr
-# Log file: D:/Hyun/soc_proj/tetris/vivado.log
-# Journal file: D:/Hyun/soc_proj/tetris\vivado.jou
+# Start of session at: Tue Jun  1 17:55:08 2021
+# Process ID: 5844
+# Current directory: D:/hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13564 D:\hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/hyun/soc_proj/tetris\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Hyun/soc_proj/tetris/tetris.xpr
+open_project D:/hyun/soc_proj/tetris/tetris.xpr
 Scanning sources...
 Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/hyun/soc_proj/tetris/tetris.ip_user_files'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Hyun/soc_proj/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/hyun/soc_proj/tetris/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 788.625 ; gain = 114.852
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 852.383 ; gain = 205.531
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Wed May 26 19:07:23 2021] Launched synth_1...
-Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/synth_1/runme.log
-[Wed May 26 19:07:23 2021] Launched impl_1...
-Run output will be captured here: D:/Hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
-open_bd_design {D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
+launch_sdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ipx::edit_ip_in_project -upgrade true -name TFTLCD_NEW_v1_0_project -directory D:/hyun/soc_proj/tetris/tetris.tmp/TFTLCD_NEW_v1_0_project d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/clock_divider.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/grid_block.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/horizontal.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/tftlcdctrl.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/vertical.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 11 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/hyun/soc_proj/tetris/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/hyun/soc_proj/tetris/ip_repo'
+open_bd_design {D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd}
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding component instance block -- xilinx.com:user:textlcd:1.0 - textlcd_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
@@ -34,15 +63,96 @@ Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_
 Adding component instance block -- xilinx.com:user:pushbutton:1.0 - pushbutton_0
 Adding component instance block -- xilinx.com:user:TFTLCD_NEW:1.0 - TFTLCD_NEW_0
 Adding component instance block -- xilinx.com:user:seven_seg:1.0 - seven_seg_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /resetn_0(rst) and /TFTLCD_NEW_0/TFTLCD_nRESET(undef)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_0(clk) and /textlcd_0/lcdclk(undef)
-Successfully read diagram <system> from BD file <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd>
-delete_bd_objs [get_bd_nets TFTLCD_CLK_0_1] [get_bd_ports TFTLCD_CLK_0]
-delete_bd_objs [get_bd_nets TFTLCD_nRESET_0_1] [get_bd_ports TFTLCD_nRESET_0]
+Successfully read diagram <system> from BD file <D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/system.bd>
+ipx::edit_ip_in_project -upgrade true -name TFTLCD_NEW_v1_0_project -directory D:/hyun/soc_proj/tetris/tetris.tmp/TFTLCD_NEW_v1_0_project d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/hyun/soc_proj/tetris/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/clock_divider.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/grid_block.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/horizontal.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/tftlcdctrl.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/vertical.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/hyun/soc_proj/tetris/ip_repo/TFTLCD_NEW_1.0/hdl/TFTLCD_NEW_v1_0.v:]
+update_compile_order -fileset sources_1
+close_project
+delete_bd_objs [get_bd_nets TFTLCD_NEW_0_TFTLCD_R] [get_bd_nets TFTLCD_NEW_0_TFTLCD_G] [get_bd_nets TFTLCD_NEW_0_TFTLCD_B] [get_bd_intf_nets ps7_0_axi_periph_M03_AXI] [get_bd_nets TFTLCD_NEW_0_TFTLCD_Vsync] [get_bd_nets TFTLCD_NEW_0_TFTLCD_DE_out] [get_bd_nets TFTLCD_NEW_0_TFTLCD_Tpower] [get_bd_nets TFTLCD_NEW_0_TFTLCD_TCLK] [get_bd_nets TFTLCD_NEW_0_TFTLCD_Hsync] [get_bd_cells TFTLCD_NEW_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:TFTLCD_NEW:1.0 TFTLCD_NEW_0
+endgroup
+set_property location {2 424 585} [get_bd_cells TFTLCD_NEW_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/TFTLCD_NEW_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins TFTLCD_NEW_0/S00_AXI]
+Slave segment </TFTLCD_NEW_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C3_0000 [ 64K ]>
 connect_bd_net [get_bd_ports clk_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_CLK]
 connect_bd_net [get_bd_ports resetn_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_nRESET]
 WARNING: [BD 41-1731] Type mismatch between connected pins: /resetn_0(rst) and /TFTLCD_NEW_0/TFTLCD_nRESET(undef)
+connect_bd_net [get_bd_ports TFTLCD_TCLK_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_TCLK]
+connect_bd_net [get_bd_ports TFTLCD_Hsync_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_Hsync]
+connect_bd_net [get_bd_ports TFTLCD_Vsync_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_Vsync]
+connect_bd_net [get_bd_ports TFTLCD_DE_out_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_DE_out]
+connect_bd_net [get_bd_ports TFTLCD_R_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_R]
+connect_bd_net [get_bd_ports TFTLCD_G_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_G]
+connect_bd_net [get_bd_ports TFTLCD_B_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_B]
+connect_bd_net [get_bd_ports TFTLCD_Tpower_0] [get_bd_pins TFTLCD_NEW_0/TFTLCD_Tpower]
+regenerate_bd_layout
+regenerate_bd_layout -routing
 save_bd_design
-Wrote  : <D:\Hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
-Wrote  : <D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+Wrote  : <D:\hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+CRITICAL WARNING: [BD 41-1347] Reset pin /textlcd_0/resetn (associated clock /textlcd_0/s00_axi_aclk) is connected to asynchronous reset source /resetn_0.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_50M/peripheral_aresetn.
+Wrote  : <D:\hyun\soc_proj\tetris\tetris.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block textlcd_0 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLKIF)' for system_xbar_1.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(clock)' for system_rst_ps7_0_50M_1.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pushbutton_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seven_seg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TFTLCD_NEW_0 .
+WARNING: [IP_Flow 19-3452] Invalid long/float value '5e+07' specified for parameter 'FREQ_HZ(CLK)' for system_auto_pc_0.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File D:/hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 5564377f9caf9379; cache size = 7.098 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_processing_system7_0_0, cache-ID = 739d5c28b3f7309c; cache size = 7.098 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_rst_ps7_0_50M_1, cache-ID = 7973adf757b37647; cache size = 7.098 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_xbar_1, cache-ID = d40076e2b37ee955; cache size = 7.098 MB.
+[Tue Jun  1 18:29:52 2021] Launched system_TFTLCD_NEW_0_1_synth_1, synth_1...
+Run output will be captured here:
+system_TFTLCD_NEW_0_1_synth_1: D:/hyun/soc_proj/tetris/tetris.runs/system_TFTLCD_NEW_0_1_synth_1/runme.log
+synth_1: D:/hyun/soc_proj/tetris/tetris.runs/synth_1/runme.log
+[Tue Jun  1 18:29:52 2021] Launched impl_1...
+Run output will be captured here: D:/hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1319.313 ; gain = 47.184
+file copy -force D:/hyun/soc_proj/tetris/tetris.runs/impl_1/system_wrapper.sysdef D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+
+launch_sdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Jun  1 21:38:01 2021] Launched impl_1...
+Run output will be captured here: D:/hyun/soc_proj/tetris/tetris.runs/impl_1/runme.log
+file copy -force D:/hyun/soc_proj/tetris/tetris.runs/impl_1/system_wrapper.sysdef D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+
+launch_sdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed May 26 19:14:13 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  1 21:42:10 2021...

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed May 26 17:37:05 2021
+-- Date        : Wed May 26 17:37:04 2021
 -- Host        : DESKTOP-188JJQI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Hyun/soc_proj/tetris/tetris.srcs/sources_1/bd/system/ip/system_pushbutton_0_0/system_pushbutton_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_pushbutton_0_0 -prefix
+--               system_pushbutton_0_0_ system_pushbutton_0_0_sim_netlist.vhdl
 -- Design      : system_pushbutton_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -36,8 +36,6 @@ entity system_pushbutton_0_0_pushbutton_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_pushbutton_0_0_pushbutton_v1_0_S00_AXI : entity is "pushbutton_v1_0_S00_AXI";
 end system_pushbutton_0_0_pushbutton_v1_0_S00_AXI;
 
 architecture STRUCTURE of system_pushbutton_0_0_pushbutton_v1_0_S00_AXI is
@@ -2777,8 +2775,6 @@ entity system_pushbutton_0_0_pushbutton_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_pushbutton_0_0_pushbutton_v1_0 : entity is "pushbutton_v1_0";
 end system_pushbutton_0_0_pushbutton_v1_0;
 
 architecture STRUCTURE of system_pushbutton_0_0_pushbutton_v1_0 is

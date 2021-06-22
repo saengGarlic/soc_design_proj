@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 27 17:48:19 2021
+# Process ID: 6028
+# Current directory: D:/hyun/soc_proj/tetris
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13540 D:\hyun\soc_proj\tetris\tetris.xpr
+# Log file: D:/hyun/soc_proj/tetris/vivado.log
+# Journal file: D:/hyun/soc_proj/tetris\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/hyun/soc_proj/tetris/tetris.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/hyun/soc_proj/tetris/tetris.sdk -hwspec D:/hyun/soc_proj/tetris/tetris.sdk/system_wrapper.hdf
